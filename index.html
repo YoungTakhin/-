@@ -12,6 +12,8 @@
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" type="text/css" href="tooltip.css">
+    <link rel="stylesheet" type="text/css" href="donate.css">
 </head>
 <body>
     <div id="main" class="system-footer tc">
@@ -33,9 +35,10 @@
 				<div id="DST">
 					<textarea id="dstText" name="dstText"></textarea>
 				</div>
+				
                 <p>程序猿导航 - 程序员的网址导航<br>
                     by 云南民族大学 YoungTak-hin<br>
-					Github : <a href="https://github.com/YoungTakhin">YoungTak-hin</a><br>
+					Github : <a href="https://github.com/YoungTakhin">YoungTakhin</a><br>
 					QQ : 850189787<br>
 					<br>
 					来源于<a href="https://github.com/cheer-hwj">cheer-hwj</a>的<a href="https://github.com/cheer-hwj/AnywhereAnything">git</a><br>
@@ -45,6 +48,31 @@
 		<ul id="searchItem"></ul>
         <div id="content">
             <div style="position:relative;"></div>
+			
+			<div class="sy_shang">
+				<a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="赠人玫瑰，手有余香!">打赏</a>
+				<div class="shang_box"><a href="javascript:void(0)" onclick="dashangToggle()" title="关闭" style="float:right;">关闭</a>
+					<div id="sl_shang" onsubmit="return postcheck()">
+						<div class="sl_shang">
+							<b>打赏方式：</b>
+							<ul>
+								<li><input type="radio" name="paytype" onclick="opay();return changeItem(0);"  checked="checked" />支付宝</li>
+								<li><input type="radio" name="paytype" onclick="opay();return changeItem(1);" />微信</li>
+								<li><input type="radio" name="paytype" onclick="opay();return changeItem(2);"  />QQ红包</li>
+							</ul>
+						</div>
+						<div id="sl_shang0">
+							<img src="img/alipay.png" alt=""><br>打开支付宝扫一扫
+						</div>
+						<div id="sl_shang1" style="display:none;">
+							<img src="img/wechatpay.png" alt=""><br>使用微信扫一扫
+						</div>
+						<div id="sl_shang2" style="display:none;">
+							<img src="img/qqpay.png" alt=""><br>打开QQ扫一扫
+						</div>
+					</div>
+				</div>
+			</div>
 			<p>仅供学习交流使用</p>
         </div>
     </div>
@@ -69,6 +97,8 @@
 	</script>
     <script type="text/javascript" src="create.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="donate.js"></script>
+	
 	<script type="text/javascript" src="canvas-particle.js"> </script>
 	<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
 	<script> 
@@ -189,7 +219,7 @@
 					//alert(json.trans_result[0].dst +" <br /> "+json.trans_result[0].src);
 					//console.log(data);
 				},
-				error:function(){
+				error: function(){
 		  			alert('Fail to translate with baidu API!');
 				}
 			});

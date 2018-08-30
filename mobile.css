@@ -38,15 +38,16 @@
 	}
     #search p {
         text-align: center;
-        margin-top: -200rem;
+        margin-top: -400rem;
+		width: 100%;
     }
 	#srcText {
 		box-sizing: border-box;
-		margin-top: -100rem;
+		margin-top: -200rem;
 	}
 	#dstText {
 		box-sizing: border-box;
-		margin-top: -100rem;
+		margin-top: -200rem;
 	}
     #searchItem {
         display: flex;
@@ -72,5 +73,6 @@
 	}
     #content p {
         text-align: center;
+		width: 100%;
     }
 }

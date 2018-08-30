@@ -133,25 +133,6 @@ body {
 	margin-right: 3rem;
 	list-style-type: none;
 }
-/* Tooltip 文本 */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 100px;
-    background-color: black;
-	font-weight: bold;
-    color: #2fb388;
-    text-align: center;
-    padding: 8px 0;
-    border-radius: 16px;
- 
-    /* 定位 */
-    position: absolute;
-    z-index: 1;
-}
-/* 鼠标移动上去后显示提示框 */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
 #searchItem li {
 	margin: 0.4rem;
 	width: 3rem;

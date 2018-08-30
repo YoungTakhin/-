@@ -1,0 +1,62 @@
+.sy_shang {
+	clear: both;
+	overflow: hidden;
+}
+.shang_box {
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+	background-color: #2d2d2d;
+	border-radius: 20px;
+	position: fixed;
+	z-index: 999;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -200px;
+	box-shadow: 2px 2px 4px 3px #111111;
+	display: none;
+}
+.dashang {
+	display: block;
+	width: 100px;
+	margin: 5px 0 auto auto;
+	height: 25px;
+	line-height: 25px;
+	padding: 10px;
+	background-color: #E74851;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 16px;
+	transition: all 0.3s;
+}
+.dashang:hover {
+	opacity: 0.8;
+	padding: 15px;
+	font-size: 18px;
+}
+#sl_shang0, #sl_shang1, #sl_shang2 {
+	text-align: center;
+}
+#sl_shang0 img, #sl_shang1 img, #sl_shang2 img {
+	margin: 15px 0 0 0;
+	max-width: 260px;
+}
+.sl_shang {
+	overflow: hidden;
+}
+.sl_shang b {
+	font-size: 18px;
+}
+.sl_shang ul {
+	margin-top: 10px;
+	clear: both;
+	overflow: hidden;
+}
+.sl_shang li {
+	float: left;
+	margin-left: 10px;
+}
