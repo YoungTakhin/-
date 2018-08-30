@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>程序猿导航 - 程序员的网址导航</title>
+	<style>
+		body{background-color: #2D2D2D}
+	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Keywords" content="程序猿导航,程序员导航,程序猿,程序员,导航,网址导航,导航页">
+	<meta name="Description" content="程序员的网址导航">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css">
+</head>
+<body>
+    <div id="main" class="system-footer tc">
+        <div id="search">
+			<h1 id="h1">
+				<a href="https://yuan1024.com/">
+					<img src="img/logo2.png" alt="程序猿导航" width="128" height="60">
+				</a>
+			</h1>
+            <div>
+                <div>
+                    <input type="text" name="" id="searchBox">
+                </div>
+				<div id="SRC">
+					<textarea id="srcText" name="srcText"></textarea>
+					<button id="ClickEN" name="ClickEN">英译中</button>
+					<button id="ClickZH" name="ClickZH">中译英</button>
+				</div>
+				<div id="DST">
+					<textarea id="dstText" name="dstText"></textarea>
+				</div>
+                <p>程序猿导航 - 程序员的网址导航<br>
+                    by 云南民族大学 YoungTak-hin<br>
+					Github : <a href="https://github.com/YoungTakhin">YoungTak-hin</a><br>
+					QQ : 850189787<br>
+					<br>
+					来源于<a href="https://github.com/cheer-hwj">cheer-hwj</a>的<a href="https://github.com/cheer-hwj/AnywhereAnything">git</a><br>
+				</p>
+            </div>
+        </div>
+		<ul id="searchItem"></ul>
+        <div id="content">
+            <div style="position:relative;"></div>
+			<p>仅供学习交流使用</p>
+        </div>
+    </div>
+	<script>
+		window.onload = function(){
+			//配置
+			var config = {
+				vx: 4,//点x轴速度,正为右，负为左
+				vy: 4,//点y轴速度
+				height: 2,//点高宽，其实为正方形，所以不宜太大
+				width: 2,
+				count: 200,//点个数
+				color: "121, 162, 185",//点颜色
+				stroke: "130, 255, 255",//线条颜色
+				dist: 6000,//点吸附距离
+				e_dist: 20000,//鼠标吸附加速距离
+				max_conn: 10//点到点最大连接数
+			}
+			//调用
+			CanvasParticle(config);
+		}
+	</script>
+    <script type="text/javascript" src="create.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="canvas-particle.js"> </script>
+	<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
+	<script> 
+		window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>'))
+	</script>
+	<script type="text/javascript">
+		/* 鼠标特效 */
+		var a_idx = 0;
+		jQuery(document).ready(function($) {
+			$("#main").click(function(e) {
+				var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+				var $i = $("<span />").text(a[a_idx]);
+				a_idx = (a_idx + 1) % a.length;
+				var x = e.pageX,
+				y = e.pageY;
+				$i.css({
+					"z-index": 999,
+					"top": y - 20,
+					"left": x,
+					"position": "absolute",
+					"font-weight": "bold",
+					"color": "#E60000"
+				});
+				$("#main").append($i);
+				$i.animate({
+					"top": y - 180,
+					"opacity": 0
+				},
+				1500,
+				function() {
+					$i.remove();
+				});
+			});
+		});
+	</script>
+	<script src="activate-power-mode.js"></script>
+	<script>
+		POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+		POWERMODE.shake = true; // 控制开启/关闭屏幕震动特效  
+		document.body.addEventListener('input', POWERMODE);
+	</script>
+	<script src="./md5.js"></script>
+	<script type="text/javascript">
+		$("#ClickEN").click(function (){
+			var contents = $("#srcText").val() ;
+			//alert(contents) ;
+			var appid = '20180830000200404';
+			var key = 'rPTR45SVYds9mM7tsIaF';
+			var salt = (new Date).getTime();
+			var query = contents;
+			// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+			var from = 'en';
+			var to = 'zh';
+			var str1 = appid + query + salt +key;
+			var sign = MD5(str1);
+			$.ajax({
+				url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+				type: 'get',
+				dataType: 'jsonp',
+				data: {
+					q: query,
+					appid: appid,
+					salt: salt,
+					from: from,
+					to: to,
+					sign: sign
+				},
+				success: function (json, status) {
+					//alert("here is the status :"+status);
+					$("#dstText").empty();
+					var str2 = json.trans_result[0].dst;
+					$("#dstText").append(str2);
+
+					//for(var i = 0 ; i < json.trans_result.length ; i++) {
+					//	$("#dstText").append( json.trans_result[i].dst  +" <br />");
+					//}
+					//alert(json.trans_result[0].dst +" <br /> "+json.trans_result[0].src);
+					//console.log(data);
+				},
+				error:function(){
+		  			alert('Fail to translate with baidu API!');
+				}
+			});
+		});
+		$("#ClickZH").click(function (){
+			var contents = $("#srcText").val() ;
+			//alert(contents) ;
+			var appid = '20180830000200404';
+			var key = 'rPTR45SVYds9mM7tsIaF';
+			var salt = (new Date).getTime();
+			var query = contents;
+			// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
+			var from = 'zh';
+			var to = 'en';
+			var str1 = appid + query + salt +key;
+			var sign = MD5(str1);
+			$.ajax({
+				url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+				type: 'get',
+				dataType: 'jsonp',
+				data: {
+					q: query,
+					appid: appid,
+					salt: salt,
+					from: from,
+					to: to,
+					sign: sign
+				},
+				success: function (json, status) {
+					//alert("here is the status :"+status);
+					$("#dstText").empty();
+					var str2 = json.trans_result[0].dst;
+					$("#dstText").append(str2);
+
+					//for(var i = 0 ; i < json.trans_result.length ; i++) {
+					//	$("#dstText").append( json.trans_result[i].dst  +" <br />");
+					//}
+					//alert(json.trans_result[0].dst +" <br /> "+json.trans_result[0].src);
+					//console.log(data);
+				},
+				error:function(){
+		  			alert('Fail to translate with baidu API!');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

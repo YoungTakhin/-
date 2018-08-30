@@ -1,0 +1,253 @@
+* {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: 0;
+	outline: 0;
+}
+html, body {
+	height: 100%;
+	font-size: 14px;
+}
+body {
+	/*background-color: #b3e5fc;*/
+	color: #2fb388;
+	font-family: "Arial", "Microsoft YaHei";
+}
+#h1 {
+	padding: 1% 2rem 3rem 1rem;
+	/*color: #2d2d2d;*/
+}
+#main {
+	display: flex;
+	align-items: flex-start;
+	min-height: 100%;
+}
+#search {
+	flex: 0 0 25%;
+	align-self: stretch;
+	/*color: #2d2d2d;*/
+}
+#search > div {
+	position: fixed;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	display: flex;
+	padding: 4% 1.5rem 0 2rem;
+	box-sizing: border-box;
+	width: 25%;
+	height: 100%;
+	/*background: #2d2d2d;*/
+}
+#searchBox {
+	box-sizing: border-box;
+	margin: 0 auto;
+	height: 4rem;
+	line-height: 1.2;
+	width: 100%;
+	padding: 0 2rem;
+	color: inherit;
+	font-size: 1.6rem;
+	background: url(img/searchicon.png) no-repeat right center #4c4c4c;
+	border-radius: 38px;
+}
+#srcText {
+	box-sizing: border-box;
+	font-weight:550;
+	margin: 30% auto 0 0;
+	height: 120px;
+	line-height: 1.2;
+	width: 100%;
+	padding: 0.2rem 1.4rem;
+	color: inherit;
+	font-size: 1.6rem;
+	background: url(img/trans.png) no-repeat right center #4c4c4c;
+	border-radius: 30px;
+}
+#dstText {
+	box-sizing: border-box;
+	font-weight:550;
+	margin: 5% auto 0 0;
+	height: 120px;
+	line-height: 1.2;
+	width: 100%;
+	padding: 0.2rem 1.4rem;
+	color: inherit;
+	font-size: 1.6rem;
+	background: #4c4c4c;
+	border-radius: 30px;
+}
+#searchBox:focus {
+	background: #6f6f6f;
+}
+#srcText:focus {
+	background: #6f6f6f;
+}
+#dstText:focus {
+	background: #6f6f6f;
+}
+#ClickEN {
+	box-sizing: border-box;
+	font-weight:bold;
+	margin: auto 0 auto 7.5%;
+	height: 3rem;
+	width: 35%;
+	color: inherit;
+	font-size: 1.4rem;
+	background: #4c4c4c;
+	border-radius: 38px;
+	float:left;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+#ClickZH {
+	box-sizing: border-box;
+	font-weight:bold;
+	margin: auto 7.5% auto 0;
+	height: 3rem;
+	width: 35%;
+	color: inherit;
+	font-size: 1.4rem;
+	background: #4c4c4c;
+	border-radius: 38px;
+	float:right;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+#ClickEN:hover {
+    background: #6f6f6f;
+}
+#ClickZH:hover {
+    background: #6f6f6f;
+}
+#search p {
+	padding: 20% 0 10rem 0;
+	color: #6f6f6f;
+	font-size: 0.6rem;
+}
+#search a {
+	color: #2fb388;
+}
+#searchItem {
+	margin-top: 16vh;
+	margin-right: 3rem;
+	list-style-type: none;
+}
+/* Tooltip 文本 */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+	font-weight: bold;
+    color: #2fb388;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 16px;
+ 
+    /* 定位 */
+    position: absolute;
+    z-index: 1;
+}
+/* 鼠标移动上去后显示提示框 */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+#searchItem li {
+	margin: 0.4rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 1.5rem;
+	overflow: hidden;
+	box-shadow: 0 2px 2px 1px #111111;
+	cursor: pointer;
+}
+#searchItem li img {
+	width: 100%;
+}
+#content {
+	margin-top: 15vh;
+	margin-right: 2%;
+}
+#content > div {
+	display: flex;
+	flex-flow: row wrap;
+}
+#content > p {
+	margin-top: 20rem;
+	margin-bottom: 1.8rem;
+	color: #6f6f6f;
+	font-size: 0.6rem;
+}
+.item {
+	margin: 0 0.6rem;
+	margin-bottom: 42px;
+	overflow: hidden;
+}
+.wrap {
+	padding: 0rem 1;
+	text-align: center;
+	width: 150px;
+}
+.wrap h2 {
+	font-weight: blod;
+	color: #2fb388;
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+.recommend img {
+	margin: .5rem 0;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 3rem;
+	box-shadow: 0 4px 4px 2px #111111;
+	background-color: #FFFFFF;
+}
+.recommend p {
+	line-height: 2rem;
+}
+.wrap ul {
+	margin: 1rem 0;
+	list-style-type: none;
+	text-align: left;
+	color: #6f6f6f;
+}
+.wrap li {
+	padding: .4rem 0.2rem;
+}
+.wrap li:hover {
+	background: #111111;
+}
+.wrap li img {
+	margin-right: .3rem;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 3rem;
+	box-shadow: 0 2px 2px 1px #111111;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+}
+.wrap .test {
+	position: relative;
+}
+.wrap .test:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(45, 45, 45, 0.75), rgba(45, 45, 45, 1));
+}
+.item.change {
+	overflow: visible;
+}
+.item.change .wrap {
+	position: relative;
+	box-shadow: 0 2px 4px 2px #111111;
+	background: #2d2d2d;
+	z-index: 1;
+}
+.item.change .test:after {
+	background: none;
+}
