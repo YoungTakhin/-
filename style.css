@@ -10,7 +10,6 @@ html, body {
 	font-size: 14px;
 }
 body {
-	background-color: #2d2d2d;
 	color: #2fb388;
 	font-family: "Arial", "Microsoft YaHei";
 }
@@ -119,13 +118,6 @@ body {
 }
 #ClickZH:hover {
     background: #6f6f6f;
-}
-#weather {
-	margin-top: 5px;
-	font-weight: bold;
-	color: #2fb388;
-	text-align: center;
-	font-size: 14px;
 }
 #search p {
 	padding: 20% 0 10rem 0;
