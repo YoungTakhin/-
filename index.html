@@ -2,9 +2,6 @@
 <html>
 <head>
     <title>程序猿导航 - 程序员的网址导航</title>
-	<style>
-		body{background-color: #2D2D2D}
-	</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="Keywords" content="程序猿导航,程序员导航,程序猿,程序员,导航,网址导航,导航页">
@@ -27,6 +24,13 @@
                 <div>
                     <input type="text" name="" id="searchBox">
                 </div>
+				<div id="weather">
+					<span id="city"></span>
+					<span id="cond"></span>
+					<span id="tmp"></span><br>
+					<span id="fl"></span>
+					<span id="wind"></span>
+				</div>
 				<div id="SRC">
 					<textarea id="srcText" name="srcText"></textarea>
 					<button id="ClickEN" name="ClickEN">英译中</button>
@@ -48,7 +52,6 @@
 		<ul id="searchItem"></ul>
         <div id="content">
             <div style="position:relative;"></div>
-			
 			<div class="sy_shang">
 				<a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="赠人玫瑰，手有余香!">打赏</a>
 				<div class="shang_box"><a href="javascript:void(0)" onclick="dashangToggle()" title="关闭" style="float:right;">关闭</a>
@@ -80,8 +83,8 @@
 		window.onload = function(){
 			//配置
 			var config = {
-				vx: 4,//点x轴速度,正为右，负为左
-				vy: 4,//点y轴速度
+				vx: 3,//点x轴速度,正为右，负为左
+				vy: 3,//点y轴速度
 				height: 2,//点高宽，其实为正方形，所以不宜太大
 				width: 2,
 				count: 200,//点个数
@@ -102,7 +105,7 @@
 	<script type="text/javascript" src="canvas-particle.js"> </script>
 	<script src="https://cdn.staticfile.org/jquery/3.1.1/jquery.min.js"></script>
 	<script> 
-		window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>'))
+		window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')
 	</script>
 	<script type="text/javascript">
 		/* 鼠标特效 */
@@ -152,7 +155,7 @@
 			// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
 			var from = 'en';
 			var to = 'zh';
-			var str1 = appid + query + salt +key;
+			var str1 = appid + query + salt + key;
 			var sign = MD5(str1);
 			$.ajax({
 				url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
@@ -193,7 +196,7 @@
 			// 多个query可以用\n连接  如 query='apple\norange\nbanana\npear'
 			var from = 'zh';
 			var to = 'en';
-			var str1 = appid + query + salt +key;
+			var str1 = appid + query + salt + key;
 			var sign = MD5(str1);
 			$.ajax({
 				url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
@@ -223,6 +226,28 @@
 		  			alert('Fail to translate with baidu API!');
 				}
 			});
+		});
+	</script>
+	<script type="text/javascript">
+		$.ajax({
+			type: 'get',
+			url: 'https://free-api.heweather.com/s6/weather/now?location=auto_ip&key=f26cc8350f214537ae9839b70bdb0758',
+			dataType: 'json',
+			success: function(json) {
+				var a = json.HeWeather6[0].basic.admin_area;
+				var b = json.HeWeather6[0].basic.location;
+				var c = json.HeWeather6[0].now.cond_txt;
+				var d = json.HeWeather6[0].now.tmp;
+				var e = json.HeWeather6[0].now.fl;
+				var f = json.HeWeather6[0].now.wind_dir;
+				var g = json.HeWeather6[0].now.wind_sc;
+				
+				$('#city').append(a + b);
+				$('#cond').append(c);
+				$('#tmp').append(d + '°C');
+				$('#fl').append('体感温度' + e + '°C');
+				$('#wind').append(f + g + '级');
+			},
 		});
 	</script>
 </body>
