@@ -107,8 +107,17 @@
 		recommend: ['googlefanyi.ico', '谷歌翻译', 'https://translate.google.cn/'],
 		content: [
 			['baidufanyi.jpg', '百度翻译', 'https://fanyi.baidu.com/'],
-			['vultr.ico', 'Vultr', 'https://my.vultr.com/'],
-			['kuaidi100.ico', '快递100', 'https://www.kuaidi100.com/']
+			['qichacha.png', '企查查', 'https://www.qichacha.com'],
+			['kuaidi100.ico', '快递100', 'https://www.kuaidi100.com/'],
+			['vultr.ico', 'Vultr', 'https://my.vultr.com/']
+		]
+	}, {
+		header: '购物',
+		recommend: ['taobao.png', '淘宝', 'https://www.taobao.com/'],
+		content: [
+			['dangdang.jpg', '当当', 'http://www.dangdang.com/'],
+			['jingdong.jpg', '京东', 'https://www.jd.com/'],
+			['tianmao.jpg', '天猫', 'https://www.tmall.com/']
 		]
 	}];
 
