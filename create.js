@@ -56,6 +56,8 @@ function createItem(obj, parent, n) {
 	});
 	item.appendChild(wrap);
 	parent.appendChild(item);
+	
+	document.getElementById("searchBox").focus();
 }
 
 function createHistory(arr, ul) {
