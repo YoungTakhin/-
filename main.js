@@ -125,11 +125,12 @@
 		createItem(val, div, 4)
 	});
 	
-	window.addEventListener('keydown', function () {
+	window.addEventListener('keydown', function (e) {
 		var keyword = document.querySelector('#searchBox');
-		if (event.keyCode === 108 || event.keyCode === 13) {
+		var theEvent = window.event || e;
+		if (theEvent.keyCode === 108 || theEvent.keyCode === 13) {
 			window.open('http://www.baidu.com/s?wd=' + keyword.value);
 		}
-	});
+	}); //参数e用来兼容火狐
 	
 })();
