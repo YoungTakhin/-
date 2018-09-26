@@ -127,7 +127,7 @@
 	
 	window.addEventListener('keydown', function () {
 		var keyword = document.querySelector('#searchBox');
-		if (event.code === 108 || event.keyCode === 13) {
+		if (event.keyCode === 108 || event.keyCode === 13) {
 			window.open('http://www.baidu.com/s?wd=' + keyword.value);
 		}
 	});
