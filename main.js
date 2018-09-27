@@ -21,6 +21,7 @@
 		recommend: ['sinaweibo.png', '新浪微博', 'https://weibo.com/'],
 		content: [
 			['qzone.png', 'QQ空间', 'https://qzone.qq.com/'],
+			['wechat.ico', '微信网页版', 'https://wx.qq.com/'],
 			['zhihu.png', '知乎', 'https://www.zhihu.com/'],
 			['douban.png', '豆瓣', 'https://www.douban.com/'],
 			['instagram.png', 'Instagram','https://instagram.com/'],
@@ -45,6 +46,8 @@
 		recommend: ['baidubaike.png', '百度百科','https://baike.baidu.com/'],
 		content: [
 			['wikipedia.png', '维基百科', 'https://zh.wikipedia.org/'],
+			['zhiwang.ico', '中国知网', 'http://cnki.net/'],
+			['wanfang.ico', '万方数据', 'http://www.wanfangdata.com.cn/index.html'],
 			['wikihow.png', 'wikihow.png', 'https://zh.wikihow.com/'],
 			['googlescholar.png', 'Google学术', 'http://scholar.google.com.cn/'],
 			['worldcat.png', 'WorldCat', 'https://www.worldcat.org/']
@@ -74,6 +77,9 @@
 		content: [
 			['iqiyi.png', '爱奇艺', 'http://www.iqiyi.com/'],
 			['qqv.png', '腾讯视频', 'https://v.qq.com/'],
+			['douyu.png', '斗鱼', 'https://www.douyu.com/'],
+			['huya.ico', '虎牙', 'https://www.huya.com'],
+			['panda.ico', '熊猫', 'https://www.panda.tv/'],
 			['youku.png', '优酷', 'https://www.youku.com/'],
 			['letv.png', '乐视视频', 'http://www.le.com/'],
 			['youtube.png', 'YouTube', 'https://www.youtube.com/'],
