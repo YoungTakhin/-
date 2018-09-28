@@ -23,7 +23,7 @@ body {
 	min-height: 100%;
 }
 #search {
-	flex: 0 0 25%;
+	flex: 0 0 24%;
 	align-self: stretch;
 	/*color: #2d2d2d;*/
 }
@@ -34,7 +34,7 @@ body {
 	display: flex;
 	padding: 3% 1.5rem 0 2rem;
 	box-sizing: border-box;
-	width: 25%;
+	width: 24%;
 	height: 100%;
 	/*background: #2d2d2d;*/
 }
@@ -51,30 +51,32 @@ body {
 	border-radius: 38px;
 }
 #srcText {
+	resize: none;
 	box-sizing: border-box;
 	font-weight:550;
-	margin: 30% auto 0 0;
-	height: 120px;
+	margin: auto auto 0 0;
+	height: 100px;
 	line-height: 1.2;
-	width: 100%;
+	width: 95%;
 	padding: 0.2rem 1.4rem;
 	color: inherit;
-	font-size: 1.6rem;
+	font-size: 1.42rem;
 	background: url(img/trans.png) no-repeat right center #4c4c4c;
-	border-radius: 30px;
+	border-radius: 24px;
 }
 #dstText {
+	resize: none;
 	box-sizing: border-box;
-	font-weight:550;
-	margin: 5% auto 0 0;
-	height: 120px;
+	font-weight: 550;
+	margin: 3px auto 12% 0;
+	height: 100px;
 	line-height: 1.2;
-	width: 100%;
+	width: 95%;
 	padding: 0.2rem 1.4rem;
 	color: inherit;
-	font-size: 1.6rem;
+	font-size: 1.42rem;
 	background: #4c4c4c;
-	border-radius: 30px;
+	border-radius: 24px;
 }
 #searchBox:focus {
 	background: #6f6f6f;
@@ -95,7 +97,7 @@ body {
 	font-size: 1.4rem;
 	background: #4c4c4c;
 	border-radius: 38px;
-	float:left;
+	float: left;
 	-webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
 }
@@ -109,7 +111,7 @@ body {
 	font-size: 1.4rem;
 	background: #4c4c4c;
 	border-radius: 38px;
-	float:right;
+	float: right;
 	-webkit-transition-duration: 0.2s; /* Safari */
     transition-duration: 0.2s;
 }

@@ -58,6 +58,7 @@
 		content: [
 			['36kr.png', '36氪', 'https://36kr.com/'],
 			['sspai.png', '少数派','https://sspai.com/'],
+			['zealer.ico', 'ZEALER','http://www.zealer.com/'],
 			['tuicool.ico', '推酷','https://www.tuicool.com/'],
 			['ithome.png', 'IT之家','https://www.ithome.com/']
 		]
@@ -66,9 +67,10 @@
 		recommend: ['imooc.png', '慕课网', 'https://www.imooc.com/'],
 		content: [
 			['runroob.ico', '菜鸟教程','http://www.runoob.com/'],
-			['ted.png', 'TED','https://www.ted.com/'],
 			['jikexueyuan.png', '极客学院', 'https://www.jikexueyuan.com/'],
 			['w3school.png', 'W3school', 'http://www.w3school.com.cn/'],
+			['mooc.png', '中国大学MOOC','https://www.icourse163.org/'],
+			['ted.png', 'TED','https://www.ted.com/'],
 			['Khan.png', 'Khan Academy', 'https://www.khanacademy.org/']
 		]
 	}, {
@@ -112,9 +114,10 @@
 		header: '工具',
 		recommend: ['googlefanyi.ico', '谷歌翻译', 'https://translate.google.cn/'],
 		content: [
-			['baidufanyi.jpg', '百度翻译', 'https://fanyi.baidu.com/'],
-			['qichacha.png', '企查查', 'https://www.qichacha.com'],
+			['amap.ico', '高德地图', 'https://ditu.amap.com/'],
 			['kuaidi100.ico', '快递100', 'https://www.kuaidi100.com/'],
+			['qichacha.png', '企查查', 'https://www.qichacha.com'],
+			['baidufanyi.jpg', '百度翻译', 'https://fanyi.baidu.com/'],
 			['vultr.ico', 'Vultr', 'https://my.vultr.com/']
 		]
 	}, {
@@ -123,7 +126,8 @@
 		content: [
 			['dangdang.jpg', '当当', 'http://www.dangdang.com/'],
 			['jingdong.jpg', '京东', 'https://www.jd.com/'],
-			['tianmao.jpg', '天猫', 'https://www.tmall.com/']
+			['tianmao.jpg', '天猫', 'https://www.tmall.com/'],
+			['amazon.ico', '亚马逊', 'https://www.amazon.cn/']
 		]
 	}];
 
@@ -134,8 +138,12 @@
 	window.addEventListener('keydown', function (e) {
 		var keyword = document.querySelector('#searchBox');
 		var theEvent = window.event || e;
+		//检测回车键
 		if (theEvent.keyCode === 108 || theEvent.keyCode === 13) {
-			window.open('http://www.baidu.com/s?wd=' + keyword.value);
+			//判断是否选中搜索框
+			if($('#searchBox').is(':focus')) {
+				window.open('http://www.baidu.com/s?wd=' + keyword.value);
+			}
 		}
 	}); //参数e用来兼容火狐
 	
