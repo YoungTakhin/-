@@ -24,10 +24,11 @@
 				</a>
 			</h1>
             <div>
+				<div id="showtime"></div>
                 <div>
-                    <input type="text" name="" id="searchBox">
+                    <input type="text" name="" id="searchBox" >
                 </div>
-				<div id="weather" style = "margin-top: 10px; height: 24%; font-weight: bold; color: #2fb388; text-align: center; font-size: 14px;">
+				<div id="weather">
 					<span id="city"></span>
 					<span id="cond"></span>
 					<span id="tmp"></span><br>
@@ -250,6 +251,33 @@
 				$('#wind').append(f + g + '级');
 			},
 		});
+	</script>
+	<script type="text/javascript"> 
+		function time(){
+    	//获得显示时间的div
+    	t_div = document.getElementById('showtime');
+			var now=new Date() //替换div内容
+			var weekStr = "";
+			var week = new Date().getDay();
+			if (week == 0) {
+				weekStr = "Sun.";
+			} else if (week == 1) {
+				weekStr = "Mon.";
+			} else if (week == 2) {
+				weekStr = "Tue.";
+			} else if (week == 3) {
+				weekStr = "Wed.";
+			} else if (week == 4) {
+				weekStr = "Thu.";
+			} else if (week == 5) {
+				weekStr = "Fri.";
+			} else if (week == 6) {
+				weekStr = "Sat.";
+			}  
+			t_div.innerHTML = now.getFullYear()+"/"+(now.getMonth()+1)+"/"+now.getDate()+"  "+weekStr+"  "+now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();//等待一秒钟后调用time方法，由于settimeout在time方法内，所以可以无限调用
+			setTimeout(time,1000);
+		}
+		time()
 	</script>
 </body>
 </html>
