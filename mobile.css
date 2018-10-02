@@ -2,6 +2,12 @@
     #main {
         flex-flow: column;
     }
+	#h1 {
+        padding-top: auto;
+        padding-bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+	}
 	#searchBox {
 		box-sizing: border-box;
 		margin: 0 auto;
@@ -11,23 +17,25 @@
 		font-size: 1.6rem;
 	}
     #search {
+        margin-top: auto;
         flex-basis: 100%;
     }
     #search > div {
-        padding: 0rem 1rem 2 2rem;
+		position: static;
+        padding: auto;
         height: auto;
         width: 100%;
-        z-index: 1;
-        margin-top: -4.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 	#searchItem {
-		width: 102%;
+		width: 100%;
 		justify-content: space-between;
 	}
 	#searchItem li {
 		margin: 0 auto;
-		width: 2.65rem;
-		height: 2.65rem;
+		width: 2.5rem;
+		height: 2.5rem;
 		border-radius: 1.5rem;
 		overflow: hidden;
 		box-shadow: 0 2px 2px 1px #111111;
@@ -37,17 +45,27 @@
 		width: 100%;
 	}
     #search p {
+		display: none;
         text-align: center;
         margin-top: -400rem;
 		width: 100%;
     }
+	#weather {
+		display: none;
+        margin-top: auto;
+        margin-bottom: auto;
+	}
 	#srcText {
-		box-sizing: border-box;
-		margin-top: -200rem;
+		display: none;
 	}
 	#dstText {
-		box-sizing: border-box;
-		margin-top: -200rem;
+		display: none;
+	}
+	#ClickEN {
+		display: none;
+	}
+	#ClickZH {
+		display: none;
 	}
     #searchItem {
         display: flex;
@@ -75,4 +93,10 @@
         text-align: center;
 		width: 100%;
     }
+	#showtime {
+		display: none;
+	}
+	.tc canvas {
+		display: none;
+	}
 }

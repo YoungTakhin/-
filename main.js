@@ -74,6 +74,18 @@
 			['Khan.png', 'Khan Academy', 'https://www.khanacademy.org/']
 		]
 	}, {
+		header: '新闻',
+		recommend: ['theinitium.png', '端', 'https://theinitium.com/'],
+		content: [
+			['jandan.png', '煎蛋', 'http://jandan.net/'],
+			['qdaily.png', '好奇心日报', 'http://www.qdaily.com/'],
+			['163news.png', '网易新闻', 'https://news.163.com/'],
+			['qqnews.png', '腾讯新闻', 'http://news.qq.com/'],
+			['googlenewscn.png', 'Google新闻', 'http://news.google.com.hk'],
+			['ifeng.png', '凤凰网', 'http://www.ifeng.com/'],
+			['reuters.png', '路透社', 'http://www.reuters.com/']
+		]
+	}, {
 		header: '视频',
 		recommend: ['bilibili.png', 'Bilibili', 'https://www.bilibili.com/'],
 		content: [

@@ -82,7 +82,7 @@ body {
 	resize: none;
 	box-sizing: border-box;
 	font-weight: 550;
-	margin: 3px auto 12% 0;
+	margin: 4px auto 12% 0;
 	height: 100px;
 	line-height: 1.2;
 	width: 95%;
@@ -104,7 +104,7 @@ body {
 #ClickEN {
 	box-sizing: border-box;
 	font-weight:bold;
-	margin: auto 0 auto 7.5%;
+	margin: 0 0 0 7.5%;
 	height: 3rem;
 	width: 35%;
 	color: inherit;
@@ -118,7 +118,7 @@ body {
 #ClickZH {
 	box-sizing: border-box;
 	font-weight: bold;
-	margin: auto 7.5% auto 0;
+	margin: 0 7.5% 0 0;
 	height: 3rem;
 	width: 35%;
 	color: inherit;
